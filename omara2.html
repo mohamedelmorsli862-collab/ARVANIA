@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>الأمراء | مملكة اريفانيا</title>
+<title>الرتب الملكية | مملكة اريفانيا</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -319,6 +319,197 @@ body.light .footer {
     background: rgba(255, 255, 255, 0.95);
     color: #0f172a;
 }
+/* ===== DUKES SECTION ===== */
+.dukes-section{
+    max-width:1200px;
+    margin:60px auto;
+    padding:40px 6%;
+}
+
+.dukes-title{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:40px;
+    text-shadow:0 0 15px rgba(255,215,0,.6);
+}
+
+/* Grid */
+.dukes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+/* Card مختلف عن الأمراء */
+.duke-card{
+    padding:30px 20px;
+    border-radius:20px;
+    text-align:center;
+    background:linear-gradient(135deg,#1e293b,#334155);
+    border:1px solid rgba(255,215,0,.3);
+    box-shadow:0 0 20px rgba(255,215,0,.2);
+    transition:all .4s ease;
+}
+
+.duke-card:hover{
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 0 35px rgba(255,215,0,.6);
+}
+
+.duke-name{
+    font-size:1.6rem;
+    font-weight:900;
+    color:#ffd700;
+}
+
+.duke-symbols{
+    margin-top:12px;
+    font-size:1.4rem;
+}
+/* ===== DUKES WITH IMAGES ===== */
+
+.dukes-section{
+    max-width:1200px;
+    margin:80px auto;
+    padding:40px 6%;
+}
+
+.dukes-title{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:40px;
+    color:#ffd700;
+    text-shadow:0 0 20px rgba(255,215,0,.6);
+}
+
+.dukes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.duke-card{
+    position:relative;
+    border-radius:22px;
+    overflow:hidden;
+    border:2px solid rgba(255,215,0,.4);
+    box-shadow:0 0 25px rgba(255,215,0,.3);
+    transition:all .4s ease;
+}
+
+.duke-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px rgba(255,215,0,.8);
+}
+
+.duke-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    filter:brightness(.65);
+}
+
+.duke-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom,transparent 30%,rgba(0,0,0,.85));
+}
+
+.duke-content{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+    color:#fff;
+}
+
+.duke-name{
+    font-size:1.7rem;
+    font-weight:900;
+    color:#ffd700;
+}
+
+.duke-symbols{
+    margin-top:10px;
+    font-size:1.3rem;
+}
+/* ===== DUKES EPIC STYLE ===== */
+
+.duke-card{
+    position:relative;
+    height:340px;
+    border-radius:22px;
+    overflow:hidden;
+    border:2px solid rgba(255,215,0,.5);
+    box-shadow:0 0 30px rgba(255,215,0,.4);
+    transition:all .5s ease;
+}
+
+.duke-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .6s ease;
+}
+
+.duke-card:hover img{
+    transform:scale(1.1);
+}
+
+.duke-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85) 20%,
+        rgba(0,0,0,.4) 50%,
+        transparent 100%
+    );
+}
+
+.duke-content{
+    position:absolute;
+    bottom:25px;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    z-index:2;
+}
+
+.duke-name{
+    font-size:1.9rem;
+    font-weight:900;
+    color:#ffd700;
+    text-shadow:0 0 15px rgba(255,215,0,.9);
+}
+
+.duke-symbols{
+    margin-top:10px;
+    font-size:1.4rem;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,215,0,0.15), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(120,0,255,0.15), transparent 40%),
+        linear-gradient(180deg, #0f172a, #020617);
+    color: #e5e7eb;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:url("https://www.transparenttextures.com/patterns/stardust.png");
+    opacity:.15;
+    pointer-events:none;
+}
+
+
 </style>
 </head>
 
@@ -369,8 +560,97 @@ body.light .footer {
 </div>
 
 </section>
+<section class="dukes-section">
 
-<footer>© مملكة اريفانيا — قسم الأمراء</footer>
+    <h2 class="dukes-title">⚜️ الدوقات ⤹</h2>
+
+    <div class="dukes">
+
+        <!-- لوسيوس -->
+        <div class="duke-card">
+            <img src="./lucius.jpg" alt="لوسيوس">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">لـوسـيـوس</div>
+                <div class="duke-symbols">🔥 ⚡ ❄️</div>
+            </div>
+        </div>
+
+        <!-- اكاشي -->
+        <div class="duke-card">
+            <img src="./akashi.jpg" alt="اكاشي">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">اكـاشـي</div>
+                <div class="duke-symbols">🌟 🥀</div>
+            </div>
+        </div>
+
+        <!-- استا -->
+        <div class="duke-card">
+            <img src="./asta.jpg" alt="استا">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">اسـتـا</div>
+                <div class="duke-symbols">🎭 🌫️</div>
+            </div>
+        </div>
+
+        <!-- ليفاي -->
+        <div class="duke-card">
+            <img src="./levi.jpg" alt="ليفاي">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">لـيـفـاي</div>
+                <div class="duke-symbols">♦️ 🍁</div>
+            </div>
+        </div>
+
+        <!-- سيمو -->
+        <div class="duke-card">
+            <img src="./simo.jpg" alt="سيمو">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">سـيـمـو</div>
+                <div class="duke-symbols">🔆 🐍</div>
+            </div>
+        </div>
+
+        <!-- اثاناسيا -->
+        <div class="duke-card">
+            <img src="./athanasia.jpg" alt="اثاناسيا">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">اثـانـاسـيـا</div>
+                <div class="duke-symbols">🎻 🔰</div>
+            </div>
+        </div>
+
+        <!-- ريو -->
+        <div class="duke-card">
+            <img src="./rio.jpg" alt="ريو">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">ريــــو</div>
+                <div class="duke-symbols">🌑 🪦</div>
+            </div>
+        </div>
+
+        <div class="duke-card">
+            <img src="./law.jpg" alt="لاو">
+            <div class="duke-overlay"></div>
+            <div class="duke-content">
+                <div class="duke-name">لاو</div>
+                <div class="duke-symbols">☠️ 🕷️</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<footer>© مملكة اريفانيا — قسم الرتب الملكية</footer>
 <script>
     const toggleBtn = document.getElementById("themeToggle");
 
